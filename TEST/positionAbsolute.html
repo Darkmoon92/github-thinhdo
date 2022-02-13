@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 100%;
+            height: 50rem;
+            background-color:black;
+            position: relative;
+        }
+        .boxed{
+            width: 10rem;
+            height: 5rem;
+            background-color:red;
+            position: absolute;
+            /* top:10px; */
+            /* left:10px; */
+            /* right:10px; */
+            /* left:50%;
+            top:50%;
+            transform:translate(-50%,-50%); */
+            /* overlay all */
+            /* top:0;
+            left:0;
+            width:100%;
+            height:100%; */
+            /* cach 2 */
+            /* top:0;
+            right:0;
+            bottom:0;
+            left:0;
+            width:auto;
+            height:auto; */
+            /* overlay theo chieu ngang */
+            /* width:100%; or width:auto; */
+            /* top: 0;
+            left:0; */
+            /* overlay theo chieu doc */
+            /* height:auto; or height:100%;
+            top:0;
+            bottom:0; */
+            z-index: 2;
+        }  
+        p{
+            color: white;
+            position: relative;
+            z-index: 1;
+        }  
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="boxed"></div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam voluptatibus molestiae dolore voluptates molestias eaque quibusdam non tempora reprehenderit facere consequatur iure praesentium, itaque omnis facilis, rerum at, accusantium eligendi?</p>
+    </div>
+</body>
+</html>

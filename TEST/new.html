@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="tab-content">
+        <br>
+        <div>
+            <div>
+                <div class="h3 text-center text-success my-4">ĐĂNG KÍ ĐỐI
+                    TƯỢNG</div>
+            </div>
+            <div class="container">
+                <form:form action="dangki" method="post" modelAttribute="ttDoiTuong">
+                    <div class="form-group row">
+                        <label for="maDT" class="font-weight-bold col-2 col-form-label">Mã
+                            Đối Tượng <sup style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="maDT" type="text" class="form-control" id="maDT" name="maDT"></form:input>
+                            <form:errors path="maDT" cssClass="alert text-danger" element="div"></form:errors>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="hoTen" class="font-weight-bold col-2 col-form-label">Họ
+                            tên <sup style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="hoTen" type="text" class="form-control" id="hoTen" name="hoTen">
+                            </form:input>
+                            <form:errors path="hoTen" cssClass="alert text-danger" element="div"></form:errors>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="gioiTinh" class="font-weight-bold col-2 col-form-label">Giới Tính <sup
+                                style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="gioiTinh" type="text" class="form-control" id="gioiTinh" name="gioiTinh">
+                            </form:input>
+                            <form:errors path="gioiTinh" cssClass="alert text-danger" element="div"></form:errors>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="ngaySinh" class="font-weight-bold col-2 col-form-label">Ngày Sinh<sup
+                                style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="ngaySinh" type="date" class="form-control" id="ngaySinh" name="ngaySinh">
+                            </form:input>
+                            <form:errors path="ngaySinh" cssClass="alert text-danger" element="div"></form:errors>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="diaChi" class="font-weight-bold col-2 col-form-label">Địa
+                            chỉ<sup style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="diaChi" type="text" class="form-control" id="diaChi" name="diaChi">
+                            </form:input>
+                            <form:errors path="diaChi" cssClass="alert text-danger" element="div"></form:errors>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="soDienThoai" class="font-weight-bold col-2 col-form-label">Số Điện
+                            Thoại<sup style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="soDienThoai" type="number" class="form-control" id="soDienThoai"
+                                name="soDienThoai"></form:input>
+                            <form:errors path="soDienThoai" cssClass="alert text-danger" element="div"></form:errors>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="ngayTiepXucF0" class="font-weight-bold col-2 col-form-label">Ngày Tiếp
+                            Xúc F0<sup style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="ngayTiepXucF0" type="date" class="form-control" id="ngayTiepXucF0"
+                                name="ngayTiepXucF0"></form:input>
+                            <form:errors path="ngayTiepXucF0" cssClass="alert text-danger" element="div"></form:errors>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="phongcachly" class="font-weight-bold col-2 col-form-label">Phòng cách
+                            ly<sup style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="phongcachly" type="text" class="form-control" id="phongcachly"
+                                name="phongcachly"></form:input>
+                            <form:errors path="phongcachly" cssClass="alert text-danger" element="div"></form:errors>
+                            <p class="text-left" style="color: red">
+                                <strong>${mes}</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="ngayBDCL" class="font-weight-bold col-2 col-form-label">Ngày bắt
+                            đầu cách ly<sup style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="ngayBDCL" type="date" class="form-control" id="ngayBDCL" name="ngayBDCL">
+                            </form:input>
+                            <form:errors path="ngayBDCL" cssClass="alert text-danger" element="div"></form:errors>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="ngayKTCLDK" class="font-weight-bold col-2 col-form-label">Ngày kết
+                            thúc cách ly dự kiến<sup style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="ngayKTCLDK" type="date" class="form-control" id="ngayKTCLDK"
+                                name="ngayKTCLDK"></form:input>
+                            <form:errors path="ngayKTCLDK" cssClass="alert text-danger" element="div"></form:errors>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="cpThanhToanDK" class="font-weight-bold col-2 col-form-label">Chi phí
+                            thanh toan dự kiến<sup style="color: red;">*</sup>
+                        </label>
+                        <div class="col-sm-10">
+                            <form:input path="cpThanhToanDK" type="text" class="form-control" id="cpThanhToanDK"
+                                name="cpThanhToanDK" disabled="true"></form:input>
+                            <form:errors path="cpThanhToanDK" cssClass="alert text-danger" element="div"></form:errors>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <button type="submit" class="btn btn-primary mt-3 offset-2 mr-2">Tạo
+                            mới đối tượng cách ly</button>
+                        <button type="reset" class="btn btn-danger mt-3 mr-2">Nhập
+                            lại</button>
+                        <a class="btn btn-success h-100 mt-3" href="index">Trở về
+                            trang chủ</a>
+                    </div>
+                </form:form>
+                <hr>
+                <p class="text-danger h4">* Nếu Mã Đối Tượng đã tồn tại,
+                    hệ thống sẽ xem như user muốn update thông tin</p>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        Date.prototype.addDays = function (days) {
+            var dat = new Date(this.valueOf());
+            dat.setDate(dat.getDate() + days);
+            return dat;
+        }
+
+        $(document).ready(function () {
+            $('#ngayBDCL').on('change', function (event) {
+                var ngayBDCL = new Date(this.value);
+                var ngayKTCLDK = ngayBDCL.addDays(21);
+
+                $('#ngayKTCLDK').val(ngayKTCLDK.format("dd/mm/yyyy"));
+            });
+        });
+    </script>
+</body>
+
+</html>
